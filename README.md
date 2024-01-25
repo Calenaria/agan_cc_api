@@ -15,11 +15,16 @@ bash ./scripts/setup.sh
 
 This will clone and setup the project. The setup script will create the database and execute migrations.
 
+## Postman workspace
+
+https://www.postman.com/orbital-module-explorer-29655976/workspace/testing-api/overview
+
 ## Info
 
 - Base URL is 'http://localhost:12001/api/v1'
 - Collections (GET, POST) are plural 
 - Singular resources (GET, PUT, DELETE) in singular
+- Entities marked with annotation "AsEndpoint" are available endpoints
 
 ## Features
 
