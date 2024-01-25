@@ -1,0 +1,25 @@
+version: "3"
+services:
+  app:
+    container_name: agan_cc_app
+    image: thecodingmachine/php:8.3-v4-apache-node20
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 12001:8000
+    environment:
+      PHP_EXTENSION_PGSQL: 1
+      PHP_EXTENSION_PDO_PGSQL: 1
+  app-db:
+    container_name: agan_cc_app_db
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: dev_symfony
+      POSTGRES_PASSWORD: dev_symfony
+      POSTGRES_DB: symfony
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:                               
+    name: db_data
